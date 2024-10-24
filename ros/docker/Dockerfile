@@ -1,6 +1,3 @@
-##############
-# Base image #
-##############
 FROM ros:noetic-robot as base
 
 ARG CATKIN_WORKSPACE_DIR="/catkin_ws"
@@ -26,6 +23,13 @@ RUN apt-get update \
     ros-${ROS_DISTRO}-compressed-image-transport \
     ros-${ROS_DISTRO}-compressed-depth-image-transport \
     ros-${ROS_DISTRO}-image-transport \
+    ros-${ROS_DISTRO}-controller-manager \
+    ros-${ROS_DISTRO}-ros-control \
+    ros-${ROS_DISTRO}-ros-controllers \
+    ros-${ROS_DISTRO}-move-base \
+    ros-${ROS_DISTRO}-gazebo-ros \
+    ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+    ros-${ROS_DISTRO}-gazebo-ros-control \
  && rm -rf /var/lib/apt/lists/*
 
 # Add additional installation instructions here...

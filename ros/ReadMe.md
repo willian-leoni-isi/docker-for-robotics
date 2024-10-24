@@ -1,4 +1,4 @@
-# ROS Noetic Docker Template
+# Using ROS Noetic Docker Template from:
 
 Author: [Tobit Flatscher](https://github.com/2b-t) (2021 - 2024)
 
@@ -25,8 +25,6 @@ ros/
 ├── .devcontainer/                    # Configuration files for containers in Visual Studio Code
 └── .vscode/                          # Configuration files for Visual Studio Code
 ```
-
-
 
 ## 1. Set-up
 
@@ -64,7 +62,7 @@ Either **run the Docker** manually with
 
 ```bash
 $ cd ros/
-$ docker compose -f docker/docker-compose-gui.yml up
+$ docker compose -f docker/docker-compose-gui.yml up -d
 ```
 
 and then connect to the running Docker
@@ -73,8 +71,6 @@ and then connect to the running Docker
 $ cd ros/
 $ docker exec -it ros_docker bash
 ```
-
-(or `docker/docker-compose-gui-nvidia.yml` in case you are running an Nvidia graphics cards and want to have hardware acceleration [with the Nvidia container runtime](https://nvidia.github.io/nvidia-container-runtime/)). Alternatively use the corresponding [**Visual Studio Code Dev Containers integration**](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) as described [here](https://github.com/2b-t/docker-for-robotics/blob/main/doc/VisualStudioCodeSetup.md). In latter case the configuration can be adjusted in `docker/docker-compose-vscode.yml`. Using the Docker through Visual Studio Code is much easier and is therefore recommended!
 
 In order to be able to run **graphical user interfaces** from inside the Docker you might have to type
 
