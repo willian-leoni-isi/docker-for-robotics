@@ -3,21 +3,21 @@
 Author: [Tobit Flatscher](https://github.com/2b-t) (2021 - 2024)
 
 ### Passo 1: Iniciar o Contêiner Docker
-``bash
+``
 cd ros/
 docker compose -f docker/docker-compose-gui.yml up -d
 ``
 ### Passo 2: Acessar o Terminal do Contêiner
-``bash
+``
 cd ros/
 docker exec -it ros_docker bash
 ``
 ### Passo 3: Habilitar Interfaces Gráficas (opcional)
-``bash
+``
 xhost +
 ``
 ### Passo 4: Importar Repositórios
-``bash
+``
 cd src/
 vcs import < .repos
 ``
