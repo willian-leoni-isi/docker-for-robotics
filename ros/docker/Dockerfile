@@ -30,6 +30,7 @@ RUN apt-get update \
     ros-${ROS_DISTRO}-gazebo-ros \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \
     ros-${ROS_DISTRO}-gazebo-ros-control \
+    ros-$ROS_DISTRO-plotjuggler-ros \
  && rm -rf /var/lib/apt/lists/*
 
 # Add additional installation instructions here...
